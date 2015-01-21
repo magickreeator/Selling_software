@@ -63,6 +63,36 @@
       <DependentUpon>developerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Func.cs" />
+    <Compile Include="insertAppForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insertAppForm.Designer.cs">
+      <DependentUpon>insertAppForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="insertCategoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insertCategoryForm.Designer.cs">
+      <DependentUpon>insertCategoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="insertDeveloperForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insertDeveloperForm.Designer.cs">
+      <DependentUpon>insertDeveloperForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="insertSellerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insertSellerForm.Designer.cs">
+      <DependentUpon>insertSellerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="insertSellingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insertSellingForm.Designer.cs">
+      <DependentUpon>insertSellingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="mainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +118,36 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Selling_softwareDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="updateAppForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateAppForm.Designer.cs">
+      <DependentUpon>updateAppForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateCategoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateCategoryForm.Designer.cs">
+      <DependentUpon>updateCategoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateDeveloperForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateDeveloperForm.Designer.cs">
+      <DependentUpon>updateDeveloperForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateSellerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateSellerForm.Designer.cs">
+      <DependentUpon>updateSellerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateSellingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateSellingForm.Designer.cs">
+      <DependentUpon>updateSellingForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="appForm.resx">
       <DependentUpon>appForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,6 +156,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="developerForm.resx">
       <DependentUpon>developerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insertAppForm.resx">
+      <DependentUpon>insertAppForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insertCategoryForm.resx">
+      <DependentUpon>insertCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insertDeveloperForm.resx">
+      <DependentUpon>insertDeveloperForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insertSellerForm.resx">
+      <DependentUpon>insertSellerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insertSellingForm.resx">
+      <DependentUpon>insertSellingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mainForm.resx">
       <DependentUpon>mainForm.cs</DependentUpon>
