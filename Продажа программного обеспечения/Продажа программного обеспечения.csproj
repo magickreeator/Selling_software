@@ -191,6 +191,21 @@
     <EmbeddedResource Include="sellingForm.resx">
       <DependentUpon>sellingForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="updateAppForm.resx">
+      <DependentUpon>updateAppForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateCategoryForm.resx">
+      <DependentUpon>updateCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateDeveloperForm.resx">
+      <DependentUpon>updateDeveloperForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateSellerForm.resx">
+      <DependentUpon>updateSellerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateSellingForm.resx">
+      <DependentUpon>updateSellingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
