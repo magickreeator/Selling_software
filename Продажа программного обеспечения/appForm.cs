@@ -12,6 +12,8 @@ namespace Продажа_программного_обеспечения
 {
     public partial class appForm : Form
     {
+        insertAppForm insertAppFrm = new insertAppForm();
+
         Func Functions = new Func();
 
         public appForm()
@@ -28,6 +30,15 @@ namespace Продажа_программного_обеспечения
         private void appForm_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = Functions.getTableData("app");
+        }
+
+        private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            if (insertAppFrm.ShowDialog() == DialogResult.OK)
+            {
+                this.Show();
+            }
         }
     }
 }

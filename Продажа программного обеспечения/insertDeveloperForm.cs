@@ -16,5 +16,17 @@ namespace Продажа_программного_обеспечения
         {
             InitializeComponent();
         }
+
+        private void OKButton_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void goBackButton_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
     }
 }

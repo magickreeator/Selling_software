@@ -130,6 +130,7 @@
             this.OKButton.TabIndex = 10;
             this.OKButton.Text = "OK";
             this.OKButton.UseVisualStyleBackColor = true;
+            this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
             // 
             // goBackButton
             // 
@@ -139,6 +140,7 @@
             this.goBackButton.TabIndex = 11;
             this.goBackButton.Text = "Назад";
             this.goBackButton.UseVisualStyleBackColor = true;
+            this.goBackButton.Click += new System.EventHandler(this.goBackButton_Click);
             // 
             // insertSellingForm
             // 
