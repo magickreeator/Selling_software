@@ -50,11 +50,24 @@ namespace Продажа_программного_обеспечения
 
         private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             if (insertDeveloperFrm.ShowDialog() == DialogResult.OK)
             {
                 this.Show();
             }
+        }
+
+        private void удалитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count != 0)
+            {
+                if (MessageBox.Show("Вы действительно хотите удалить\nвыделенную запись из базы данных?", "Внимание", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    //Functions.deleteField(Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value));
+                    dataGridView1.DataSource = Functions.getTableData("developer");
+                }
+            }
+            else MessageBox.Show("Выберите строку в окне с данными!", "Внимание!");
         }
     }
 }

@@ -35,7 +35,7 @@ namespace Продажа_программного_обеспечения
 
         private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             if (insertAppFrm.ShowDialog() == DialogResult.OK)
             {
                 this.Show();
@@ -61,6 +61,19 @@ namespace Продажа_программного_обеспечения
                     dataGridView1.DataSource = Functions.getTableData("app");
                 }
             }
+        }
+
+        private void удалитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count != 0)
+            {
+                if (MessageBox.Show("Вы действительно хотите удалить\nвыделенную запись из базы данных?", "Внимание", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    //Functions.deleteField(Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value));
+                    dataGridView1.DataSource = Functions.getTableData("app");
+                }
+            }
+            else MessageBox.Show("Выберите строку в окне с данными!", "Внимание!");
         }
     }
 }
