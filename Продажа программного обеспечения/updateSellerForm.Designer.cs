@@ -238,13 +238,13 @@
         private System.Windows.Forms.Label firstNameLabel;
         private System.Windows.Forms.Label appIDLabel;
         private System.Windows.Forms.Label idsLabel;
-        private System.Windows.Forms.TextBox addressTextBox;
-        private System.Windows.Forms.TextBox phoneTextBox;
-        private System.Windows.Forms.TextBox birthDateTextBox;
-        private System.Windows.Forms.TextBox otchestvoTextBox;
-        private System.Windows.Forms.TextBox lastNameTextBox;
-        private System.Windows.Forms.TextBox firstNameTextBox;
-        private System.Windows.Forms.TextBox appIDTextBox;
-        private System.Windows.Forms.TextBox idsTextBox;
+        public System.Windows.Forms.TextBox addressTextBox;
+        public System.Windows.Forms.TextBox phoneTextBox;
+        public System.Windows.Forms.TextBox birthDateTextBox;
+        public System.Windows.Forms.TextBox otchestvoTextBox;
+        public System.Windows.Forms.TextBox lastNameTextBox;
+        public System.Windows.Forms.TextBox firstNameTextBox;
+        public System.Windows.Forms.TextBox appIDTextBox;
+        public System.Windows.Forms.TextBox idsTextBox;
     }
 }

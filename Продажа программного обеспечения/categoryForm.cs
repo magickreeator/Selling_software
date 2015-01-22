@@ -13,6 +13,8 @@ namespace Продажа_программного_обеспечения
     public partial class categoryForm : Form
     {
         Func Functions = new Func();
+        updateCategoryForm updateCategoryFrm = new updateCategoryForm();
+        insertCategoryForm insertCategoryFrm = new insertCategoryForm();
 
         public categoryForm()
         {
@@ -28,6 +30,29 @@ namespace Продажа_программного_обеспечения
         private void categoryForm_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = Functions.getTableData("category");
+        }
+
+        private void редактироватьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count != 0)
+            {
+                updateCategoryFrm.idcTextBox.Text   = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                updateCategoryFrm.nameTextBox.Text  = dataGridView1.CurrentRow.Cells[1].Value.ToString();                
+                updateCategoryFrm.ShowDialog();
+                if (updateCategoryFrm.DialogResult == DialogResult.OK)
+                {
+                    dataGridView1.DataSource = Functions.getTableData("app");
+                }
+            }
+        }
+
+        private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            if (insertCategoryFrm.ShowDialog() == DialogResult.OK)
+            {
+                this.Show();
+            }
         }
     }
 }

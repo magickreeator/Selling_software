@@ -12,6 +12,8 @@ namespace Продажа_программного_обеспечения
 {
     public partial class updateSellerForm : Form
     {
+        Func Functions = new Func();
+
         public updateSellerForm()
         {
             InitializeComponent();
@@ -19,8 +21,12 @@ namespace Продажа_программного_обеспечения
 
         private void OKButton_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            if (MessageBox.Show("Вы действительно хотите изменить данные в базе данных?", "Внимание", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                //Functions.updateTableData("seller")(idsTextBox.Text, appIDTextBox.Text, firstNameTextBox.Text, lastNameTextBox.Text, otchestvoTextBox.Text, birthDateTextBox.Text, phoneTextBox.Text, addressTextBox.Text);
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
         }
 
         private void goBackButton_Click(object sender, EventArgs e)

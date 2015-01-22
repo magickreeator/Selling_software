@@ -241,6 +241,7 @@
             this.Controls.Add(this.idaTextBox);
             this.Name = "insertAppForm";
             this.Text = "Добавление даных о программах";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.insertAppForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

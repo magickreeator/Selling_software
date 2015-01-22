@@ -28,5 +28,11 @@ namespace Продажа_программного_обеспечения
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
+
+        private void insertDeveloperForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
     }
 }

@@ -141,6 +141,7 @@
             this.Controls.Add(this.iddTextBox);
             this.Name = "insertDeveloperForm";
             this.Text = "Добавление даных о разработчиках";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.insertDeveloperForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

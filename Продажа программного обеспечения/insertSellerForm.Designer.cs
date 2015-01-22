@@ -221,6 +221,7 @@
             this.Controls.Add(this.idsTextBox);
             this.Name = "insertSellerForm";
             this.Text = "Добавление даных о продавцах";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.insertSellerForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

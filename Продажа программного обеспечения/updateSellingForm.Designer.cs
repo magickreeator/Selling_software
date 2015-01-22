@@ -175,10 +175,10 @@
         private System.Windows.Forms.Label amountLabel;
         private System.Windows.Forms.Label sellingDateLabel;
         private System.Windows.Forms.Label idssLabel;
-        private System.Windows.Forms.TextBox idsTextBox;
-        private System.Windows.Forms.TextBox appIDTextBox;
-        private System.Windows.Forms.TextBox amountTextBox;
-        private System.Windows.Forms.TextBox sellingDateTextBox;
-        private System.Windows.Forms.TextBox idssTextBox;
+        public System.Windows.Forms.TextBox idsTextBox;
+        public System.Windows.Forms.TextBox appIDTextBox;
+        public System.Windows.Forms.TextBox amountTextBox;
+        public System.Windows.Forms.TextBox sellingDateTextBox;
+        public System.Windows.Forms.TextBox idssTextBox;
     }
 }

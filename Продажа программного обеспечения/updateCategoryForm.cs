@@ -12,6 +12,8 @@ namespace Продажа_программного_обеспечения
 {
     public partial class updateCategoryForm : Form
     {
+        Func Functions = new Func();
+
         public updateCategoryForm()
         {
             InitializeComponent();
@@ -19,8 +21,12 @@ namespace Продажа_программного_обеспечения
 
         private void OKButton_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            if (MessageBox.Show("Вы действительно хотите изменить данные в базе данных?", "Внимание", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                //Functions.updateTableData("category")(idcTextBox.Text, nameTextBox.Text);
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
         }
 
         private void goBackButton_Click(object sender, EventArgs e)

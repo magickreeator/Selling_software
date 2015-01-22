@@ -112,7 +112,7 @@
         private System.Windows.Forms.Button OKButton;
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.Label idcLabel;
-        private System.Windows.Forms.TextBox nameTextBox;
-        private System.Windows.Forms.TextBox idcTextBox;
+        public System.Windows.Forms.TextBox nameTextBox;
+        public System.Windows.Forms.TextBox idcTextBox;
     }
 }

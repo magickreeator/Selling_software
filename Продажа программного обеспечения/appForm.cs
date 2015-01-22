@@ -13,6 +13,7 @@ namespace Продажа_программного_обеспечения
     public partial class appForm : Form
     {
         insertAppForm insertAppFrm = new insertAppForm();
+        updateAppForm updateAppFrm = new updateAppForm();
 
         Func Functions = new Func();
 
@@ -38,6 +39,27 @@ namespace Продажа_программного_обеспечения
             if (insertAppFrm.ShowDialog() == DialogResult.OK)
             {
                 this.Show();
+            }
+        }
+
+        private void редактироватьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count != 0)
+            {
+                updateAppFrm.idaTextBox.Text                = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                updateAppFrm.datePublishedTextBox.Text      = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                updateAppFrm.fileSizeTextBox.Text           = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                updateAppFrm.softwareVersionTextBox.Text    = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                updateAppFrm.priceTextBox.Text              = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                updateAppFrm.descriptionTextBox.Text        = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                updateAppFrm.recent_changeTextBox.Text      = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+                updateAppFrm.iddTextBox.Text                = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+                updateAppFrm.idcTextBox.Text                = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+                updateAppFrm.ShowDialog();
+                if (updateAppFrm.DialogResult == DialogResult.OK)
+                {
+                    dataGridView1.DataSource = Functions.getTableData("app");
+                }
             }
         }
     }

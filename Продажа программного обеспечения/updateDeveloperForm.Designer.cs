@@ -154,9 +154,9 @@
         private System.Windows.Forms.Label physical_addressLabel;
         private System.Windows.Forms.Label websiteLabel;
         private System.Windows.Forms.Label iddLabel;
-        private System.Windows.Forms.TextBox emailTextBox;
-        private System.Windows.Forms.TextBox physical_addressTextBox;
-        private System.Windows.Forms.TextBox websiteTextBox;
-        private System.Windows.Forms.TextBox iddTextBox;
+        public System.Windows.Forms.TextBox emailTextBox;
+        public System.Windows.Forms.TextBox physical_addressTextBox;
+        public System.Windows.Forms.TextBox websiteTextBox;
+        public System.Windows.Forms.TextBox iddTextBox;
     }
 }

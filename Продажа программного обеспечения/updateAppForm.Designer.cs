@@ -259,15 +259,15 @@
         private System.Windows.Forms.Label fileSizeLabel;
         private System.Windows.Forms.Label datePublishedLabel;
         private System.Windows.Forms.Label idaLabel;
-        private System.Windows.Forms.TextBox idcTextBox;
-        private System.Windows.Forms.TextBox iddTextBox;
-        private System.Windows.Forms.TextBox recent_changeTextBox;
-        private System.Windows.Forms.TextBox descriptionTextBox;
-        private System.Windows.Forms.TextBox priceTextBox;
-        private System.Windows.Forms.TextBox softwareVersionTextBox;
-        private System.Windows.Forms.TextBox fileSizeTextBox;
-        private System.Windows.Forms.TextBox datePublishedTextBox;
-        private System.Windows.Forms.TextBox idaTextBox;
+        public System.Windows.Forms.TextBox idcTextBox;
+        public System.Windows.Forms.TextBox iddTextBox;
+        public System.Windows.Forms.TextBox recent_changeTextBox;
+        public System.Windows.Forms.TextBox descriptionTextBox;
+        public System.Windows.Forms.TextBox priceTextBox;
+        public System.Windows.Forms.TextBox softwareVersionTextBox;
+        public System.Windows.Forms.TextBox fileSizeTextBox;
+        public System.Windows.Forms.TextBox datePublishedTextBox;
+        public System.Windows.Forms.TextBox idaTextBox;
 
     }
 }

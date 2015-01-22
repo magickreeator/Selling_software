@@ -101,6 +101,7 @@
             this.Controls.Add(this.idcTextBox);
             this.Name = "insertCategoryForm";
             this.Text = "Добавление даных о категориях";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.insertCategoryForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
