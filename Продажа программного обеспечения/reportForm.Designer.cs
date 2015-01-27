@@ -55,6 +55,7 @@
 
         #endregion
 
-        private System.Windows.Forms.WebBrowser reportBrowser;
+        public System.Windows.Forms.WebBrowser reportBrowser;
+
     }
 }

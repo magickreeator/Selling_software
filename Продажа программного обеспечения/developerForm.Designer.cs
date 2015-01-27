@@ -35,7 +35,6 @@
             this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.фильтрацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отчетToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ещёОдинОтчётToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -55,8 +54,7 @@
             this.редактироватьToolStripMenuItem,
             this.удалитьToolStripMenuItem,
             this.фильтрацияToolStripMenuItem,
-            this.отчетToolStripMenuItem,
-            this.ещёОдинОтчётToolStripMenuItem});
+            this.отчетToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(734, 24);
@@ -95,12 +93,7 @@
             this.отчетToolStripMenuItem.Name = "отчетToolStripMenuItem";
             this.отчетToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
             this.отчетToolStripMenuItem.Text = "Отчет";
-            // 
-            // ещёОдинОтчётToolStripMenuItem
-            // 
-            this.ещёОдинОтчётToolStripMenuItem.Name = "ещёОдинОтчётToolStripMenuItem";
-            this.ещёОдинОтчётToolStripMenuItem.Size = new System.Drawing.Size(105, 20);
-            this.ещёОдинОтчётToolStripMenuItem.Text = "Ещё один отчёт";
+            this.отчетToolStripMenuItem.Click += new System.EventHandler(this.отчетToolStripMenuItem_Click);
             // 
             // developerForm
             // 
@@ -132,6 +125,5 @@
         private System.Windows.Forms.ToolStripMenuItem удалитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem фильтрацияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem отчетToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ещёОдинОтчётToolStripMenuItem;
     }
 }
