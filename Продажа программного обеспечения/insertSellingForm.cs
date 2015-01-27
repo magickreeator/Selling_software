@@ -12,6 +12,8 @@ namespace Продажа_программного_обеспечения
 {
     public partial class insertSellingForm : Form
     {
+        Func Functions = new Func();
+
         public insertSellingForm()
         {
             InitializeComponent();
@@ -19,6 +21,7 @@ namespace Продажа_программного_обеспечения
 
         private void OKButton_Click(object sender, EventArgs e)
         {
+            Functions.addSellingData(idssTextBox.Text, sellingDateTextBox.Text, amountTextBox.Text, appIDTextBox.Text, idsTextBox.Text);
             this.DialogResult = DialogResult.OK;
             this.Close();
         }

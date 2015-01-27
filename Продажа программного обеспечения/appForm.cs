@@ -16,6 +16,7 @@ namespace Продажа_программного_обеспечения
         updateAppForm updateAppFrm = new updateAppForm();
 
         Func Functions = new Func();
+        const string tableName = "app";
 
         public appForm()
         {
@@ -30,7 +31,7 @@ namespace Продажа_программного_обеспечения
 
         private void appForm_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = Functions.getTableData("app");
+            dataGridView1.DataSource = Functions.getTableData(tableName);
         }
 
         private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -38,6 +39,10 @@ namespace Продажа_программного_обеспечения
             //this.Hide();
             if (insertAppFrm.ShowDialog() == DialogResult.OK)
             {
+                if (insertAppFrm.DialogResult == DialogResult.OK)
+                {
+                    dataGridView1.DataSource = Functions.getTableData(tableName);
+                }
                 this.Show();
             }
         }
@@ -58,7 +63,7 @@ namespace Продажа_программного_обеспечения
                 updateAppFrm.ShowDialog();
                 if (updateAppFrm.DialogResult == DialogResult.OK)
                 {
-                    dataGridView1.DataSource = Functions.getTableData("app");
+                    dataGridView1.DataSource = Functions.getTableData(tableName);
                 }
             }
         }
@@ -70,7 +75,7 @@ namespace Продажа_программного_обеспечения
                 if (MessageBox.Show("Вы действительно хотите удалить\nвыделенную запись из базы данных?", "Внимание", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     Functions.deleteAppTableField(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-                    dataGridView1.DataSource = Functions.getTableData("app");
+                    dataGridView1.DataSource = Functions.getTableData(tableName);
                 }
             }
             else MessageBox.Show("Выберите строку в окне с данными!", "Внимание!");

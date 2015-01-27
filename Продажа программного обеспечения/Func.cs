@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
 using System.Linq;
@@ -220,7 +221,7 @@ namespace Продажа_программного_обеспечения
                 using (SqlConnection conn = new SqlConnection(connect))
                 {
                     conn.Open();
-                    using (SqlCommand Update = new SqlCommand("UPDATE developer SET param2=@param2, param3=@param3, param4=@param4 WHERE idd=@param1", conn))
+                    using (SqlCommand Update = new SqlCommand("UPDATE developer SET website=@param2, physical_address=@param3, email=@param4 WHERE idd=@param1", conn))
                     {
                         Update.Parameters.AddWithValue("@param1", param1);
                         Update.Parameters.AddWithValue("@param2", param2);
@@ -349,6 +350,56 @@ namespace Продажа_программного_обеспечения
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+        public void addAppData(string param1, string param2, string param3, string param4, string param5, string param6, string param7, string param8, string param9)
+        {
+            DataSet ds = new DataSet();
+            SqlConnection con = new SqlConnection(connect);
+            con.Open();
+            SqlDataAdapter add = new SqlDataAdapter("INSERT INTO app ([ida], [datePublished], [fileSize], [softwareVersion], [price], [description], [recent_change], [idd], [idc]) VALUES ('" + param1 + "', ' " + param2 + " ', '" + param3 + "', '" + param4 + "', '" + param5 + "', '" + param6 + "', '" + param7 + "', '" + param8 + "',  '" + param9 + "');", con);
+            SqlCommandBuilder comb = new SqlCommandBuilder(add);
+            add.Fill(ds);
+            con.Close();
+        }
+        public void addCategoryData(string param1, string param2)
+        {
+            DataSet ds = new DataSet();
+            SqlConnection con = new SqlConnection(connect);
+            con.Open();
+            SqlDataAdapter add = new SqlDataAdapter("INSERT INTO category ([idc], [name]) VALUES ('" + param1 + "', ' " + param2 + "');", con);
+            SqlCommandBuilder comb = new SqlCommandBuilder(add);
+            add.Fill(ds);
+            con.Close();
+        }
+        public void addDeveloperData(string param1, string param2, string param3, string param4)
+        {
+            DataSet ds = new DataSet();
+            SqlConnection con = new SqlConnection(connect);
+            con.Open();
+            SqlDataAdapter add = new SqlDataAdapter("INSERT INTO developer ([idd], [website], [physical_address], [email]) VALUES ('" + param1 + "', ' " + param2 + " ', '" + param3 + "', '" + param4 + "');", con);
+            SqlCommandBuilder comb = new SqlCommandBuilder(add);
+            add.Fill(ds);
+            con.Close();
+        }
+        public void addSellerData(string param1, string param2, string param3, string param4, string param5, string param6, string param7, string param8)
+        {
+            DataSet ds = new DataSet();
+            SqlConnection con = new SqlConnection(connect);
+            con.Open();
+            SqlDataAdapter add = new SqlDataAdapter("INSERT INTO seller ([ids], [appID], [firstName], [lastName], [otchestvo], [birthDate], [phone], [address]) VALUES ('" + param1 + "', ' " + param2 + " ', '" + param3 + "', '" + param4 + "', '" + param5 + "', '" + param6 + "', '" + param7 + "', '" + param8 + "');", con);
+            SqlCommandBuilder comb = new SqlCommandBuilder(add);
+            add.Fill(ds);
+            con.Close();
+        }
+        public void addSellingData(string param1, string param2, string param3, string param4, string param5)
+        {
+            DataSet ds = new DataSet();
+            SqlConnection con = new SqlConnection(connect);
+            con.Open();
+            SqlDataAdapter add = new SqlDataAdapter("INSERT INTO selling ([idss], [sellingDate], [amount], [appID], [ids]) VALUES ('" + param1 + "', ' " + param2 + " ', '" + param3 + "', '" + param4 + "', '" + param5 + "');", con);
+            SqlCommandBuilder comb = new SqlCommandBuilder(add);
+            add.Fill(ds);
+            con.Close();
         }
     }
 }

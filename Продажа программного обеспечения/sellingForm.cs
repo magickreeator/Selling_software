@@ -13,6 +13,7 @@ namespace Продажа_программного_обеспечения
     public partial class sellingForm : Form
     {
         Func Functions = new Func();
+        const string tableName = "selling";
         updateSellingForm updateSellingFrm = new updateSellingForm();
         insertSellingForm insertSellingFrm = new insertSellingForm();
 
@@ -29,7 +30,7 @@ namespace Продажа_программного_обеспечения
 
         private void sellingForm_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = Functions.getTableData("selling");
+            dataGridView1.DataSource = Functions.getTableData(tableName);
         }
 
         private void редактироватьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -44,7 +45,7 @@ namespace Продажа_программного_обеспечения
                 updateSellingFrm.ShowDialog();
                 if (updateSellingFrm.DialogResult == DialogResult.OK)
                 {
-                    dataGridView1.DataSource = Functions.getTableData("selling");
+                    dataGridView1.DataSource = Functions.getTableData(tableName);
                 }
             }
         }
@@ -54,6 +55,10 @@ namespace Продажа_программного_обеспечения
             //this.Hide();
             if (insertSellingFrm.ShowDialog() == DialogResult.OK)
             {
+                if (insertSellingFrm.DialogResult == DialogResult.OK)
+                {
+                    dataGridView1.DataSource = Functions.getTableData(tableName);
+                }
                 this.Show();
             }
         }
@@ -65,7 +70,7 @@ namespace Продажа_программного_обеспечения
                 if (MessageBox.Show("Вы действительно хотите удалить\nвыделенную запись из базы данных?", "Внимание", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     Functions.deleteSellingTableField(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-                    dataGridView1.DataSource = Functions.getTableData("selling");
+                    dataGridView1.DataSource = Functions.getTableData(tableName);
                 }
             }
             else MessageBox.Show("Выберите строку в окне с данными!", "Внимание!");

@@ -12,6 +12,8 @@ namespace Продажа_программного_обеспечения
 {
     public partial class insertCategoryForm : Form
     {
+        Func Functions = new Func();
+
         public insertCategoryForm()
         {
             InitializeComponent();
@@ -19,6 +21,7 @@ namespace Продажа_программного_обеспечения
 
         private void OKButton_Click(object sender, EventArgs e)
         {
+            Functions.addCategoryData(idcTextBox.Text, nameTextBox.Text);
             this.DialogResult = DialogResult.OK;
             this.Close();
         }

@@ -13,6 +13,8 @@ namespace Продажа_программного_обеспечения
     public partial class categoryForm : Form
     {
         Func Functions = new Func();
+        const string tableName = "category";
+
         updateCategoryForm updateCategoryFrm = new updateCategoryForm();
         insertCategoryForm insertCategoryFrm = new insertCategoryForm();
 
@@ -29,7 +31,7 @@ namespace Продажа_программного_обеспечения
 
         private void categoryForm_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = Functions.getTableData("category");
+            dataGridView1.DataSource = Functions.getTableData(tableName);
         }
 
         private void редактироватьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -41,7 +43,7 @@ namespace Продажа_программного_обеспечения
                 updateCategoryFrm.ShowDialog();
                 if (updateCategoryFrm.DialogResult == DialogResult.OK)
                 {
-                    dataGridView1.DataSource = Functions.getTableData("category");
+                    dataGridView1.DataSource = Functions.getTableData(tableName);
                 }
             }
         }
@@ -51,6 +53,10 @@ namespace Продажа_программного_обеспечения
             //this.Hide();
             if (insertCategoryFrm.ShowDialog() == DialogResult.OK)
             {
+                if (insertCategoryFrm.DialogResult == DialogResult.OK)
+                {
+                    dataGridView1.DataSource = Functions.getTableData(tableName);
+                }
                 this.Show();
             }
         }
@@ -62,7 +68,7 @@ namespace Продажа_программного_обеспечения
                 if (MessageBox.Show("Вы действительно хотите удалить\nвыделенную запись из базы данных?", "Внимание", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     Functions.deleteCategoryTableField(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-                    dataGridView1.DataSource = Functions.getTableData("category");
+                    dataGridView1.DataSource = Functions.getTableData(tableName);
                 }
             }
             else MessageBox.Show("Выберите строку в окне с данными!", "Внимание!");

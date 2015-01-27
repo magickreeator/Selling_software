@@ -15,6 +15,7 @@ namespace Продажа_программного_обеспечения
         Func Functions = new Func();
         updateSellerForm updateSellerFrm = new updateSellerForm();
         insertSellerForm insertSellerFrm = new insertSellerForm();
+        const string tableName = "seller";
 
         public sellerForm()
         {
@@ -29,7 +30,7 @@ namespace Продажа_программного_обеспечения
 
         private void sellerForm_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = Functions.getTableData("seller");
+            dataGridView1.DataSource = Functions.getTableData(tableName);
         }
 
         private void редактироватьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -47,7 +48,7 @@ namespace Продажа_программного_обеспечения
                 updateSellerFrm.ShowDialog();
                 if (updateSellerFrm.DialogResult == DialogResult.OK)
                 {
-                    dataGridView1.DataSource = Functions.getTableData("seller");
+                    dataGridView1.DataSource = Functions.getTableData(tableName);
                 }
             }
         }
@@ -57,6 +58,10 @@ namespace Продажа_программного_обеспечения
             //this.Hide();
             if (insertSellerFrm.ShowDialog() == DialogResult.OK)
             {
+                if (insertSellerFrm.DialogResult == DialogResult.OK)
+                {
+                    dataGridView1.DataSource = Functions.getTableData(tableName);
+                }
                 this.Show();
             }
         }
@@ -68,7 +73,7 @@ namespace Продажа_программного_обеспечения
                 if (MessageBox.Show("Вы действительно хотите удалить\nвыделенную запись из базы данных?", "Внимание", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     Functions.deleteSellerTableField(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-                    dataGridView1.DataSource = Functions.getTableData("seller");
+                    dataGridView1.DataSource = Functions.getTableData(tableName);
                 }
             }
             else MessageBox.Show("Выберите строку в окне с данными!", "Внимание!");

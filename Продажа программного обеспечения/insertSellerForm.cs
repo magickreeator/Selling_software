@@ -12,6 +12,8 @@ namespace Продажа_программного_обеспечения
 {
     public partial class insertSellerForm : Form
     {
+        Func Functions = new Func();
+
         public insertSellerForm()
         {
             InitializeComponent();
@@ -19,6 +21,7 @@ namespace Продажа_программного_обеспечения
 
         private void OKButton_Click(object sender, EventArgs e)
         {
+            Functions.addSellerData(idsTextBox.Text, appIDTextBox.Text, firstNameTextBox.Text, lastNameTextBox.Text, otchestvoTextBox.Text, birthDateTextBox.Text, phoneTextBox.Text, addressTextBox.Text);
             this.DialogResult = DialogResult.OK;
             this.Close();
         }

@@ -12,6 +12,8 @@ namespace Продажа_программного_обеспечения
 {
     public partial class insertDeveloperForm : Form
     {
+        Func Functions = new Func();
+
         public insertDeveloperForm()
         {
             InitializeComponent();
@@ -19,6 +21,7 @@ namespace Продажа_программного_обеспечения
 
         private void OKButton_Click(object sender, EventArgs e)
         {
+            Functions.addDeveloperData(iddTextBox.Text, websiteTextBox.Text, physical_addressTextBox.Text, emailTextBox.Text);
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
