@@ -23,7 +23,7 @@ namespace Продажа_программного_обеспечения
         {
             if (MessageBox.Show("Вы действительно хотите изменить данные в базе данных?", "Внимание", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                //Functions.updateTableData("app")(idaTextBox.Text, datePublishedTextBox.Text, fileSizeTextBox.Text, softwareVersionTextBox.Text, priceTextBox.Text, descriptionTextBox.Text, recent_changeTextBox.Text, iddTextBox.Text, idcTextBox.Text);
+                Functions.updateAppTableData(idaTextBox.Text, datePublishedTextBox.Text, fileSizeTextBox.Text, softwareVersionTextBox.Text, priceTextBox.Text, descriptionTextBox.Text, recent_changeTextBox.Text, iddTextBox.Text, idcTextBox.Text);
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }

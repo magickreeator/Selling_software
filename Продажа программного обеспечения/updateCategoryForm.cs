@@ -23,7 +23,7 @@ namespace Продажа_программного_обеспечения
         {
             if (MessageBox.Show("Вы действительно хотите изменить данные в базе данных?", "Внимание", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                //Functions.updateTableData("category")(idcTextBox.Text, nameTextBox.Text);
+                Functions.updateCategoryTableData(idcTextBox.Text, nameTextBox.Text);
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }

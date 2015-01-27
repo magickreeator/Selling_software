@@ -29,7 +29,7 @@ namespace Продажа_программного_обеспечения
 
         private void categoryForm_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = Functions.getTableData("");
+            dataGridView1.DataSource = Functions.getTableData("category");
         }
 
         private void редактироватьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -61,7 +61,7 @@ namespace Продажа_программного_обеспечения
             {
                 if (MessageBox.Show("Вы действительно хотите удалить\nвыделенную запись из базы данных?", "Внимание", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    //Functions.deleteField(Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value));
+                    Functions.deleteCategoryTableField(dataGridView1.CurrentRow.Cells[0].Value.ToString());
                     dataGridView1.DataSource = Functions.getTableData("category");
                 }
             }

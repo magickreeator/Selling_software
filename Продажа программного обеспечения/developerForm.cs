@@ -63,7 +63,7 @@ namespace Продажа_программного_обеспечения
             {
                 if (MessageBox.Show("Вы действительно хотите удалить\nвыделенную запись из базы данных?", "Внимание", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    //Functions.deleteField(Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value));
+                    Functions.deleteDeveloperTableField(dataGridView1.CurrentRow.Cells[0].Value.ToString());
                     dataGridView1.DataSource = Functions.getTableData("developer");
                 }
             }
