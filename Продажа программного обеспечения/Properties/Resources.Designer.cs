@@ -63,6 +63,46 @@ namespace Продажа_программного_обеспечения.Propert
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1422386840_Dev {
+            get {
+                object obj = ResourceManager.GetObject("1422386840_Dev", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1422388937_add_cross_new_plus_create_128 {
+            get {
+                object obj = ResourceManager.GetObject("1422388937_add_cross_new_plus_create-128", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1422388947_new_24_128 {
+            get {
+                object obj = ResourceManager.GetObject("1422388947_new-24-128", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1422389233_circle_close_delete_128 {
+            get {
+                object obj = ResourceManager.GetObject("1422389233_circle_close_delete-128", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap footer_lodyas {
             get {
                 object obj = ResourceManager.GetObject("footer_lodyas", resourceCulture);

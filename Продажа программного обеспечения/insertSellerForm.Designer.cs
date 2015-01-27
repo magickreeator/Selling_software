@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(insertSellerForm));
             this.idsTextBox = new System.Windows.Forms.TextBox();
             this.appIDTextBox = new System.Windows.Forms.TextBox();
             this.firstNameTextBox = new System.Windows.Forms.TextBox();
@@ -219,6 +220,7 @@
             this.Controls.Add(this.firstNameTextBox);
             this.Controls.Add(this.appIDTextBox);
             this.Controls.Add(this.idsTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "insertSellerForm";
             this.Text = "Добавление даных о продавцах";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.insertSellerForm_FormClosed);

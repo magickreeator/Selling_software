@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(updateCategoryForm));
             this.goBackButton = new System.Windows.Forms.Button();
             this.OKButton = new System.Windows.Forms.Button();
             this.nameLabel = new System.Windows.Forms.Label();
@@ -99,6 +100,7 @@
             this.Controls.Add(this.idcLabel);
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.idcTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "updateCategoryForm";
             this.Text = "Редактирование даных о категории";
             this.ResumeLayout(false);

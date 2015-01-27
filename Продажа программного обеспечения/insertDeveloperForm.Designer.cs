@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(insertDeveloperForm));
             this.iddTextBox = new System.Windows.Forms.TextBox();
             this.websiteTextBox = new System.Windows.Forms.TextBox();
             this.physical_addressTextBox = new System.Windows.Forms.TextBox();
@@ -139,6 +140,7 @@
             this.Controls.Add(this.physical_addressTextBox);
             this.Controls.Add(this.websiteTextBox);
             this.Controls.Add(this.iddTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "insertDeveloperForm";
             this.Text = "Добавление даных о разработчиках";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.insertDeveloperForm_FormClosed);

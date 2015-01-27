@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(updateDeveloperForm));
             this.goBackButton = new System.Windows.Forms.Button();
             this.OKButton = new System.Windows.Forms.Button();
             this.emailLabel = new System.Windows.Forms.Label();
@@ -139,6 +140,7 @@
             this.Controls.Add(this.physical_addressTextBox);
             this.Controls.Add(this.websiteTextBox);
             this.Controls.Add(this.iddTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "updateDeveloperForm";
             this.Text = "Редактирование даных о разработчике";
             this.ResumeLayout(false);

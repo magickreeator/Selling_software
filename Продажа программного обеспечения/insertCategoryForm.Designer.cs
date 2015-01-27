@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(insertCategoryForm));
             this.idcTextBox = new System.Windows.Forms.TextBox();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.idcLabel = new System.Windows.Forms.Label();
@@ -99,6 +100,7 @@
             this.Controls.Add(this.idcLabel);
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.idcTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "insertCategoryForm";
             this.Text = "Добавление даных о категориях";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.insertCategoryForm_FormClosed);

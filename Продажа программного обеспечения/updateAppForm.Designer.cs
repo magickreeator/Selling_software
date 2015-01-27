@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(updateAppForm));
             this.goBackButton = new System.Windows.Forms.Button();
             this.OKButton = new System.Windows.Forms.Button();
             this.idcLabel = new System.Windows.Forms.Label();
@@ -239,6 +240,7 @@
             this.Controls.Add(this.fileSizeTextBox);
             this.Controls.Add(this.datePublishedTextBox);
             this.Controls.Add(this.idaTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "updateAppForm";
             this.Text = "Редактирование даных о программе";
             this.ResumeLayout(false);

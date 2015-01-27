@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(updateSellingForm));
             this.goBackButton = new System.Windows.Forms.Button();
             this.OKButton = new System.Windows.Forms.Button();
             this.idsLabel = new System.Windows.Forms.Label();
@@ -159,6 +160,7 @@
             this.Controls.Add(this.amountTextBox);
             this.Controls.Add(this.sellingDateTextBox);
             this.Controls.Add(this.idssTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "updateSellingForm";
             this.Text = "Редактирование даных о продаже";
             this.ResumeLayout(false);

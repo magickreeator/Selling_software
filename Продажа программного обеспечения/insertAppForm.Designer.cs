@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(insertAppForm));
             this.idaTextBox = new System.Windows.Forms.TextBox();
             this.datePublishedTextBox = new System.Windows.Forms.TextBox();
             this.fileSizeTextBox = new System.Windows.Forms.TextBox();
@@ -239,6 +240,7 @@
             this.Controls.Add(this.fileSizeTextBox);
             this.Controls.Add(this.datePublishedTextBox);
             this.Controls.Add(this.idaTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "insertAppForm";
             this.Text = "Добавление даных о программах";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.insertAppForm_FormClosed);

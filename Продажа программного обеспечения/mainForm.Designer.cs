@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
             this.developerButton = new System.Windows.Forms.Button();
             this.categoryButton = new System.Windows.Forms.Button();
             this.appButton = new System.Windows.Forms.Button();
@@ -96,6 +97,7 @@
             this.Controls.Add(this.appButton);
             this.Controls.Add(this.categoryButton);
             this.Controls.Add(this.developerButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "mainForm";
             this.Text = "Выберите таблицу";
             this.ResumeLayout(false);

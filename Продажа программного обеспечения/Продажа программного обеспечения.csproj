@@ -242,6 +242,18 @@
   <ItemGroup>
     <None Include="Resources\footer_lodyas.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1422386840_Dev.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1422388937_add_cross_new_plus_create-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1422388947_new-24-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1422389233_circle_close_delete-128.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
