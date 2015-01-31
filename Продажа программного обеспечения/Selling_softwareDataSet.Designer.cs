@@ -311,16 +311,16 @@ namespace Продажа_программного_обеспечения {
             this.tableselling = new sellingDataTable();
             base.Tables.Add(this.tableselling);
             global::System.Data.ForeignKeyConstraint fkc;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_category_app", new global::System.Data.DataColumn[] {
-                        this.tablecategory.idcColumn}, new global::System.Data.DataColumn[] {
-                        this.tableapp.idcColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_developer_app", new global::System.Data.DataColumn[] {
+                        this.tabledeveloper.iddColumn}, new global::System.Data.DataColumn[] {
+                        this.tableapp.iddColumn});
             this.tableapp.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_developer_app", new global::System.Data.DataColumn[] {
-                        this.tabledeveloper.iddColumn}, new global::System.Data.DataColumn[] {
-                        this.tableapp.iddColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_category_app", new global::System.Data.DataColumn[] {
+                        this.tablecategory.idcColumn}, new global::System.Data.DataColumn[] {
+                        this.tableapp.idcColumn});
             this.tableapp.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
@@ -332,16 +332,16 @@ namespace Продажа_программного_обеспечения {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_app_selling", new global::System.Data.DataColumn[] {
-                        this.tableapp.idaColumn}, new global::System.Data.DataColumn[] {
-                        this.tableselling.appIDColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_seller_selling", new global::System.Data.DataColumn[] {
+                        this.tableseller.idsColumn}, new global::System.Data.DataColumn[] {
+                        this.tableselling.idsColumn});
             this.tableselling.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_seller_selling", new global::System.Data.DataColumn[] {
-                        this.tableseller.idsColumn}, new global::System.Data.DataColumn[] {
-                        this.tableselling.idsColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_app_selling", new global::System.Data.DataColumn[] {
+                        this.tableapp.idaColumn}, new global::System.Data.DataColumn[] {
+                        this.tableselling.appIDColumn});
             this.tableselling.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
@@ -615,10 +615,10 @@ namespace Продажа_программного_обеспечения {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public appRow AddappRow(int ida, System.DateTime datePublished, double fileSize, string softwareVersion, double price, string description, string recent_change, int idd, int idc) {
+            public appRow AddappRow(System.DateTime datePublished, double fileSize, string softwareVersion, double price, string description, string recent_change, int idd, int idc) {
                 appRow rowappRow = ((appRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ida,
+                        null,
                         datePublished,
                         fileSize,
                         softwareVersion,
@@ -690,6 +690,9 @@ namespace Продажа_программного_обеспечения {
                 base.Columns.Add(this.columnidc);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnida}, true));
+                this.columnida.AutoIncrement = true;
+                this.columnida.AutoIncrementSeed = -1;
+                this.columnida.AutoIncrementStep = -1;
                 this.columnida.AllowDBNull = false;
                 this.columnida.Unique = true;
                 this.columnsoftwareVersion.MaxLength = 10;
@@ -920,10 +923,10 @@ namespace Продажа_программного_обеспечения {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public categoryRow AddcategoryRow(int idc, string name) {
+            public categoryRow AddcategoryRow(string name) {
                 categoryRow rowcategoryRow = ((categoryRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        idc,
+                        null,
                         name};
                 rowcategoryRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowcategoryRow);
@@ -967,6 +970,9 @@ namespace Продажа_программного_обеспечения {
                 base.Columns.Add(this.columnname);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidc}, true));
+                this.columnidc.AutoIncrement = true;
+                this.columnidc.AutoIncrementSeed = -1;
+                this.columnidc.AutoIncrementStep = -1;
                 this.columnidc.AllowDBNull = false;
                 this.columnidc.Unique = true;
                 this.columnname.MaxLength = 50;
@@ -1213,10 +1219,10 @@ namespace Продажа_программного_обеспечения {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public developerRow AdddeveloperRow(int idd, string website, string physical_address, string email) {
+            public developerRow AdddeveloperRow(string website, string physical_address, string email) {
                 developerRow rowdeveloperRow = ((developerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        idd,
+                        null,
                         website,
                         physical_address,
                         email};
@@ -1268,10 +1274,11 @@ namespace Продажа_программного_обеспечения {
                 base.Columns.Add(this.columnemail);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidd}, true));
+                this.columnidd.AutoIncrement = true;
+                this.columnidd.AutoIncrementSeed = -1;
+                this.columnidd.AutoIncrementStep = -1;
                 this.columnidd.AllowDBNull = false;
                 this.columnidd.Unique = true;
-                this.columnwebsite.MaxLength = 255;
-                this.columnphysical_address.MaxLength = 255;
                 this.columnemail.MaxLength = 255;
             }
             
@@ -1556,10 +1563,10 @@ namespace Продажа_программного_обеспечения {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public sellerRow AddsellerRow(int ids, int appID, string firstName, string lastName, string otchestvo, System.DateTime birthDate, string phone, string address) {
+            public sellerRow AddsellerRow(int appID, string firstName, string lastName, string otchestvo, System.DateTime birthDate, string phone, string address) {
                 sellerRow rowsellerRow = ((sellerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ids,
+                        null,
                         appID,
                         firstName,
                         lastName,
@@ -1627,6 +1634,9 @@ namespace Продажа_программного_обеспечения {
                 base.Columns.Add(this.columnaddress);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnids}, true));
+                this.columnids.AutoIncrement = true;
+                this.columnids.AutoIncrementSeed = -1;
+                this.columnids.AutoIncrementStep = -1;
                 this.columnids.AllowDBNull = false;
                 this.columnids.Unique = true;
                 this.columnfirstName.MaxLength = 50;
@@ -1887,10 +1897,10 @@ namespace Продажа_программного_обеспечения {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public sellingRow AddsellingRow(int idss, System.DateTime sellingDate, int amount, int appID, int ids) {
+            public sellingRow AddsellingRow(System.DateTime sellingDate, int amount, int appID, int ids) {
                 sellingRow rowsellingRow = ((sellingRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        idss,
+                        null,
                         sellingDate,
                         amount,
                         appID,
@@ -1946,6 +1956,9 @@ namespace Продажа_программного_обеспечения {
                 base.Columns.Add(this.columnids);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidss}, true));
+                this.columnidss.AutoIncrement = true;
+                this.columnidss.AutoIncrementSeed = -1;
+                this.columnidss.AutoIncrementStep = -1;
                 this.columnidss.AllowDBNull = false;
                 this.columnidss.Unique = true;
             }

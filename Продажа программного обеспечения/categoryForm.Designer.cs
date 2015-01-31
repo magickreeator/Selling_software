@@ -88,14 +88,16 @@
             // 
             // фильтрацияToolStripMenuItem
             // 
+            this.фильтрацияToolStripMenuItem.Image = global::Продажа_программного_обеспечения.Properties.Resources._1422736667_filter_128;
             this.фильтрацияToolStripMenuItem.Name = "фильтрацияToolStripMenuItem";
-            this.фильтрацияToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.фильтрацияToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
             this.фильтрацияToolStripMenuItem.Text = "Фильтрация";
             // 
             // отчетToolStripMenuItem
             // 
+            this.отчетToolStripMenuItem.Image = global::Продажа_программного_обеспечения.Properties.Resources._1422736823_document;
             this.отчетToolStripMenuItem.Name = "отчетToolStripMenuItem";
-            this.отчетToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.отчетToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.отчетToolStripMenuItem.Text = "Отчет";
             this.отчетToolStripMenuItem.Click += new System.EventHandler(this.отчетToolStripMenuItem_Click);
             // 

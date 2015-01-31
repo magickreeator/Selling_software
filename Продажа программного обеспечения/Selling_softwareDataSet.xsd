@@ -379,10 +379,10 @@ SELECT idss, sellingDate, amount, appID, ids FROM selling WHERE (idss = @idss)</
   <xs:element name="Selling_softwareDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Selling_softwareDataSet" msprop:Generator_UserDSName="Selling_softwareDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="app" msprop:Generator_TableClassName="appDataTable" msprop:Generator_TableVarName="tableapp" msprop:Generator_RowChangedName="appRowChanged" msprop:Generator_TablePropName="app" msprop:Generator_RowDeletingName="appRowDeleting" msprop:Generator_RowChangingName="appRowChanging" msprop:Generator_RowEvHandlerName="appRowChangeEventHandler" msprop:Generator_RowDeletedName="appRowDeleted" msprop:Generator_RowClassName="appRow" msprop:Generator_UserTableName="app" msprop:Generator_RowEvArgName="appRowChangeEvent">
+        <xs:element name="app" msprop:Generator_TableClassName="appDataTable" msprop:Generator_TableVarName="tableapp" msprop:Generator_TablePropName="app" msprop:Generator_RowDeletingName="appRowDeleting" msprop:Generator_RowChangingName="appRowChanging" msprop:Generator_RowEvHandlerName="appRowChangeEventHandler" msprop:Generator_RowDeletedName="appRowDeleted" msprop:Generator_UserTableName="app" msprop:Generator_RowChangedName="appRowChanged" msprop:Generator_RowEvArgName="appRowChangeEvent" msprop:Generator_RowClassName="appRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ida" msprop:Generator_ColumnVarNameInTable="columnida" msprop:Generator_ColumnPropNameInRow="ida" msprop:Generator_ColumnPropNameInTable="idaColumn" msprop:Generator_UserColumnName="ida" type="xs:int" />
+              <xs:element name="ida" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnida" msprop:Generator_ColumnPropNameInRow="ida" msprop:Generator_ColumnPropNameInTable="idaColumn" msprop:Generator_UserColumnName="ida" type="xs:int" />
               <xs:element name="datePublished" msprop:Generator_ColumnVarNameInTable="columndatePublished" msprop:Generator_ColumnPropNameInRow="datePublished" msprop:Generator_ColumnPropNameInTable="datePublishedColumn" msprop:Generator_UserColumnName="datePublished" type="xs:dateTime" minOccurs="0" />
               <xs:element name="fileSize" msprop:Generator_ColumnVarNameInTable="columnfileSize" msprop:Generator_ColumnPropNameInRow="fileSize" msprop:Generator_ColumnPropNameInTable="fileSizeColumn" msprop:Generator_UserColumnName="fileSize" type="xs:double" minOccurs="0" />
               <xs:element name="softwareVersion" msprop:Generator_ColumnVarNameInTable="columnsoftwareVersion" msprop:Generator_ColumnPropNameInRow="softwareVersion" msprop:Generator_ColumnPropNameInTable="softwareVersionColumn" msprop:Generator_UserColumnName="softwareVersion" minOccurs="0">
@@ -412,10 +412,10 @@ SELECT idss, sellingDate, amount, appID, ids FROM selling WHERE (idss = @idss)</
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="category" msprop:Generator_TableClassName="categoryDataTable" msprop:Generator_TableVarName="tablecategory" msprop:Generator_RowChangedName="categoryRowChanged" msprop:Generator_TablePropName="category" msprop:Generator_RowDeletingName="categoryRowDeleting" msprop:Generator_RowChangingName="categoryRowChanging" msprop:Generator_RowEvHandlerName="categoryRowChangeEventHandler" msprop:Generator_RowDeletedName="categoryRowDeleted" msprop:Generator_RowClassName="categoryRow" msprop:Generator_UserTableName="category" msprop:Generator_RowEvArgName="categoryRowChangeEvent">
+        <xs:element name="category" msprop:Generator_TableClassName="categoryDataTable" msprop:Generator_TableVarName="tablecategory" msprop:Generator_TablePropName="category" msprop:Generator_RowDeletingName="categoryRowDeleting" msprop:Generator_RowChangingName="categoryRowChanging" msprop:Generator_RowEvHandlerName="categoryRowChangeEventHandler" msprop:Generator_RowDeletedName="categoryRowDeleted" msprop:Generator_UserTableName="category" msprop:Generator_RowChangedName="categoryRowChanged" msprop:Generator_RowEvArgName="categoryRowChangeEvent" msprop:Generator_RowClassName="categoryRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="idc" msprop:Generator_ColumnVarNameInTable="columnidc" msprop:Generator_ColumnPropNameInRow="idc" msprop:Generator_ColumnPropNameInTable="idcColumn" msprop:Generator_UserColumnName="idc" type="xs:int" />
+              <xs:element name="idc" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidc" msprop:Generator_ColumnPropNameInRow="idc" msprop:Generator_ColumnPropNameInTable="idcColumn" msprop:Generator_UserColumnName="idc" type="xs:int" />
               <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -426,24 +426,12 @@ SELECT idss, sellingDate, amount, appID, ids FROM selling WHERE (idss = @idss)</
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="developer" msprop:Generator_TableClassName="developerDataTable" msprop:Generator_TableVarName="tabledeveloper" msprop:Generator_RowChangedName="developerRowChanged" msprop:Generator_TablePropName="developer" msprop:Generator_RowDeletingName="developerRowDeleting" msprop:Generator_RowChangingName="developerRowChanging" msprop:Generator_RowEvHandlerName="developerRowChangeEventHandler" msprop:Generator_RowDeletedName="developerRowDeleted" msprop:Generator_RowClassName="developerRow" msprop:Generator_UserTableName="developer" msprop:Generator_RowEvArgName="developerRowChangeEvent">
+        <xs:element name="developer" msprop:Generator_TableClassName="developerDataTable" msprop:Generator_TableVarName="tabledeveloper" msprop:Generator_TablePropName="developer" msprop:Generator_RowDeletingName="developerRowDeleting" msprop:Generator_RowChangingName="developerRowChanging" msprop:Generator_RowEvHandlerName="developerRowChangeEventHandler" msprop:Generator_RowDeletedName="developerRowDeleted" msprop:Generator_UserTableName="developer" msprop:Generator_RowChangedName="developerRowChanged" msprop:Generator_RowEvArgName="developerRowChangeEvent" msprop:Generator_RowClassName="developerRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="idd" msprop:Generator_ColumnVarNameInTable="columnidd" msprop:Generator_ColumnPropNameInRow="idd" msprop:Generator_ColumnPropNameInTable="iddColumn" msprop:Generator_UserColumnName="idd" type="xs:int" />
-              <xs:element name="website" msprop:Generator_ColumnVarNameInTable="columnwebsite" msprop:Generator_ColumnPropNameInRow="website" msprop:Generator_ColumnPropNameInTable="websiteColumn" msprop:Generator_UserColumnName="website" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="physical_address" msprop:Generator_ColumnVarNameInTable="columnphysical_address" msprop:Generator_ColumnPropNameInRow="physical_address" msprop:Generator_ColumnPropNameInTable="physical_addressColumn" msprop:Generator_UserColumnName="physical_address" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="idd" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidd" msprop:Generator_ColumnPropNameInRow="idd" msprop:Generator_ColumnPropNameInTable="iddColumn" msprop:Generator_UserColumnName="idd" type="xs:int" />
+              <xs:element name="website" msprop:Generator_ColumnVarNameInTable="columnwebsite" msprop:Generator_ColumnPropNameInRow="website" msprop:Generator_ColumnPropNameInTable="websiteColumn" msprop:Generator_UserColumnName="website" type="xs:string" minOccurs="0" />
+              <xs:element name="physical_address" msprop:Generator_ColumnVarNameInTable="columnphysical_address" msprop:Generator_ColumnPropNameInRow="physical_address" msprop:Generator_ColumnPropNameInTable="physical_addressColumn" msprop:Generator_UserColumnName="physical_address" type="xs:string" minOccurs="0" />
               <xs:element name="email" msprop:Generator_ColumnVarNameInTable="columnemail" msprop:Generator_ColumnPropNameInRow="email" msprop:Generator_ColumnPropNameInTable="emailColumn" msprop:Generator_UserColumnName="email" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -454,10 +442,10 @@ SELECT idss, sellingDate, amount, appID, ids FROM selling WHERE (idss = @idss)</
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="seller" msprop:Generator_TableClassName="sellerDataTable" msprop:Generator_TableVarName="tableseller" msprop:Generator_RowChangedName="sellerRowChanged" msprop:Generator_TablePropName="seller" msprop:Generator_RowDeletingName="sellerRowDeleting" msprop:Generator_RowChangingName="sellerRowChanging" msprop:Generator_RowEvHandlerName="sellerRowChangeEventHandler" msprop:Generator_RowDeletedName="sellerRowDeleted" msprop:Generator_RowClassName="sellerRow" msprop:Generator_UserTableName="seller" msprop:Generator_RowEvArgName="sellerRowChangeEvent">
+        <xs:element name="seller" msprop:Generator_TableClassName="sellerDataTable" msprop:Generator_TableVarName="tableseller" msprop:Generator_TablePropName="seller" msprop:Generator_RowDeletingName="sellerRowDeleting" msprop:Generator_RowChangingName="sellerRowChanging" msprop:Generator_RowEvHandlerName="sellerRowChangeEventHandler" msprop:Generator_RowDeletedName="sellerRowDeleted" msprop:Generator_UserTableName="seller" msprop:Generator_RowChangedName="sellerRowChanged" msprop:Generator_RowEvArgName="sellerRowChangeEvent" msprop:Generator_RowClassName="sellerRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ids" msprop:Generator_ColumnVarNameInTable="columnids" msprop:Generator_ColumnPropNameInRow="ids" msprop:Generator_ColumnPropNameInTable="idsColumn" msprop:Generator_UserColumnName="ids" type="xs:int" />
+              <xs:element name="ids" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnids" msprop:Generator_ColumnPropNameInRow="ids" msprop:Generator_ColumnPropNameInTable="idsColumn" msprop:Generator_UserColumnName="ids" type="xs:int" />
               <xs:element name="appID" msprop:Generator_ColumnVarNameInTable="columnappID" msprop:Generator_ColumnPropNameInRow="appID" msprop:Generator_ColumnPropNameInTable="appIDColumn" msprop:Generator_UserColumnName="appID" type="xs:int" minOccurs="0" />
               <xs:element name="firstName" msprop:Generator_ColumnVarNameInTable="columnfirstName" msprop:Generator_ColumnPropNameInRow="firstName" msprop:Generator_ColumnPropNameInTable="firstNameColumn" msprop:Generator_UserColumnName="firstName" minOccurs="0">
                 <xs:simpleType>
@@ -498,10 +486,10 @@ SELECT idss, sellingDate, amount, appID, ids FROM selling WHERE (idss = @idss)</
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="selling" msprop:Generator_TableClassName="sellingDataTable" msprop:Generator_TableVarName="tableselling" msprop:Generator_RowChangedName="sellingRowChanged" msprop:Generator_TablePropName="selling" msprop:Generator_RowDeletingName="sellingRowDeleting" msprop:Generator_RowChangingName="sellingRowChanging" msprop:Generator_RowEvHandlerName="sellingRowChangeEventHandler" msprop:Generator_RowDeletedName="sellingRowDeleted" msprop:Generator_RowClassName="sellingRow" msprop:Generator_UserTableName="selling" msprop:Generator_RowEvArgName="sellingRowChangeEvent">
+        <xs:element name="selling" msprop:Generator_TableClassName="sellingDataTable" msprop:Generator_TableVarName="tableselling" msprop:Generator_TablePropName="selling" msprop:Generator_RowDeletingName="sellingRowDeleting" msprop:Generator_RowChangingName="sellingRowChanging" msprop:Generator_RowEvHandlerName="sellingRowChangeEventHandler" msprop:Generator_RowDeletedName="sellingRowDeleted" msprop:Generator_UserTableName="selling" msprop:Generator_RowChangedName="sellingRowChanged" msprop:Generator_RowEvArgName="sellingRowChangeEvent" msprop:Generator_RowClassName="sellingRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="idss" msprop:Generator_ColumnVarNameInTable="columnidss" msprop:Generator_ColumnPropNameInRow="idss" msprop:Generator_ColumnPropNameInTable="idssColumn" msprop:Generator_UserColumnName="idss" type="xs:int" />
+              <xs:element name="idss" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidss" msprop:Generator_ColumnPropNameInRow="idss" msprop:Generator_ColumnPropNameInTable="idssColumn" msprop:Generator_UserColumnName="idss" type="xs:int" />
               <xs:element name="sellingDate" msprop:Generator_ColumnVarNameInTable="columnsellingDate" msprop:Generator_ColumnPropNameInRow="sellingDate" msprop:Generator_ColumnPropNameInTable="sellingDateColumn" msprop:Generator_UserColumnName="sellingDate" type="xs:dateTime" minOccurs="0" />
               <xs:element name="amount" msprop:Generator_ColumnVarNameInTable="columnamount" msprop:Generator_ColumnPropNameInRow="amount" msprop:Generator_ColumnPropNameInTable="amountColumn" msprop:Generator_UserColumnName="amount" type="xs:int" minOccurs="0" />
               <xs:element name="appID" msprop:Generator_ColumnVarNameInTable="columnappID" msprop:Generator_ColumnPropNameInRow="appID" msprop:Generator_ColumnPropNameInTable="appIDColumn" msprop:Generator_UserColumnName="appID" type="xs:int" minOccurs="0" />
@@ -531,25 +519,25 @@ SELECT idss, sellingDate, amount, appID, ids FROM selling WHERE (idss = @idss)</
       <xs:selector xpath=".//mstns:selling" />
       <xs:field xpath="mstns:idss" />
     </xs:unique>
-    <xs:keyref name="FK_app_selling" refer="Constraint1" msdata:ConstraintOnly="true">
-      <xs:selector xpath=".//mstns:selling" />
-      <xs:field xpath="mstns:appID" />
-    </xs:keyref>
     <xs:keyref name="FK_seller_selling" refer="seller_Constraint1" msdata:ConstraintOnly="true">
       <xs:selector xpath=".//mstns:selling" />
       <xs:field xpath="mstns:ids" />
+    </xs:keyref>
+    <xs:keyref name="FK_app_selling" refer="Constraint1" msdata:ConstraintOnly="true">
+      <xs:selector xpath=".//mstns:selling" />
+      <xs:field xpath="mstns:appID" />
     </xs:keyref>
     <xs:keyref name="FK_app_seller" refer="Constraint1" msdata:ConstraintOnly="true">
       <xs:selector xpath=".//mstns:seller" />
       <xs:field xpath="mstns:appID" />
     </xs:keyref>
-    <xs:keyref name="FK_category_app" refer="category_Constraint1" msdata:ConstraintOnly="true">
-      <xs:selector xpath=".//mstns:app" />
-      <xs:field xpath="mstns:idc" />
-    </xs:keyref>
     <xs:keyref name="FK_developer_app" refer="developer_Constraint1" msdata:ConstraintOnly="true">
       <xs:selector xpath=".//mstns:app" />
       <xs:field xpath="mstns:idd" />
+    </xs:keyref>
+    <xs:keyref name="FK_category_app" refer="category_Constraint1" msdata:ConstraintOnly="true">
+      <xs:selector xpath=".//mstns:app" />
+      <xs:field xpath="mstns:idc" />
     </xs:keyref>
   </xs:element>
 </xs:schema>

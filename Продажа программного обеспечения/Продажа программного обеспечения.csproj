@@ -270,12 +270,14 @@
     <None Include="Resources\1422389233_circle_close_delete-128.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\1422736667_filter-128.png" />
+    <None Include="Resources\1422736823_document.png" />
     <Content Include="Selling_software.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Selling_software_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Selling_software.mdf</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>
