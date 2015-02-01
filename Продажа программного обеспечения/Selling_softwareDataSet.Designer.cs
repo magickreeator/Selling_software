@@ -311,16 +311,16 @@ namespace Продажа_программного_обеспечения {
             this.tableselling = new sellingDataTable();
             base.Tables.Add(this.tableselling);
             global::System.Data.ForeignKeyConstraint fkc;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_developer_app", new global::System.Data.DataColumn[] {
-                        this.tabledeveloper.iddColumn}, new global::System.Data.DataColumn[] {
-                        this.tableapp.iddColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_category_app", new global::System.Data.DataColumn[] {
+                        this.tablecategory.idcColumn}, new global::System.Data.DataColumn[] {
+                        this.tableapp.idcColumn});
             this.tableapp.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_category_app", new global::System.Data.DataColumn[] {
-                        this.tablecategory.idcColumn}, new global::System.Data.DataColumn[] {
-                        this.tableapp.idcColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_developer_app", new global::System.Data.DataColumn[] {
+                        this.tabledeveloper.iddColumn}, new global::System.Data.DataColumn[] {
+                        this.tableapp.iddColumn});
             this.tableapp.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
@@ -332,16 +332,16 @@ namespace Продажа_программного_обеспечения {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_seller_selling", new global::System.Data.DataColumn[] {
-                        this.tableseller.idsColumn}, new global::System.Data.DataColumn[] {
-                        this.tableselling.idsColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_app_selling", new global::System.Data.DataColumn[] {
+                        this.tableapp.idaColumn}, new global::System.Data.DataColumn[] {
+                        this.tableselling.appIDColumn});
             this.tableselling.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_app_selling", new global::System.Data.DataColumn[] {
-                        this.tableapp.idaColumn}, new global::System.Data.DataColumn[] {
-                        this.tableselling.appIDColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_seller_selling", new global::System.Data.DataColumn[] {
+                        this.tableseller.idsColumn}, new global::System.Data.DataColumn[] {
+                        this.tableselling.idsColumn});
             this.tableselling.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
@@ -1111,11 +1111,13 @@ namespace Продажа_программного_обеспечения {
             
             private global::System.Data.DataColumn columnidd;
             
-            private global::System.Data.DataColumn columnwebsite;
+            private global::System.Data.DataColumn columnname;
             
             private global::System.Data.DataColumn columnphysical_address;
             
             private global::System.Data.DataColumn columnemail;
+            
+            private global::System.Data.DataColumn columnwebsite;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -1160,9 +1162,9 @@ namespace Продажа_программного_обеспечения {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn websiteColumn {
+            public global::System.Data.DataColumn nameColumn {
                 get {
-                    return this.columnwebsite;
+                    return this.columnname;
                 }
             }
             
@@ -1179,6 +1181,14 @@ namespace Продажа_программного_обеспечения {
             public global::System.Data.DataColumn emailColumn {
                 get {
                     return this.columnemail;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn websiteColumn {
+                get {
+                    return this.columnwebsite;
                 }
             }
             
@@ -1219,13 +1229,14 @@ namespace Продажа_программного_обеспечения {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public developerRow AdddeveloperRow(string website, string physical_address, string email) {
+            public developerRow AdddeveloperRow(string name, string physical_address, string email, string website) {
                 developerRow rowdeveloperRow = ((developerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        website,
+                        name,
                         physical_address,
-                        email};
+                        email,
+                        website};
                 rowdeveloperRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowdeveloperRow);
                 return rowdeveloperRow;
@@ -1256,9 +1267,10 @@ namespace Продажа_программного_обеспечения {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnidd = base.Columns["idd"];
-                this.columnwebsite = base.Columns["website"];
+                this.columnname = base.Columns["name"];
                 this.columnphysical_address = base.Columns["physical_address"];
                 this.columnemail = base.Columns["email"];
+                this.columnwebsite = base.Columns["website"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1266,12 +1278,14 @@ namespace Продажа_программного_обеспечения {
             private void InitClass() {
                 this.columnidd = new global::System.Data.DataColumn("idd", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnidd);
-                this.columnwebsite = new global::System.Data.DataColumn("website", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnwebsite);
+                this.columnname = new global::System.Data.DataColumn("name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnname);
                 this.columnphysical_address = new global::System.Data.DataColumn("physical_address", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnphysical_address);
                 this.columnemail = new global::System.Data.DataColumn("email", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnemail);
+                this.columnwebsite = new global::System.Data.DataColumn("website", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnwebsite);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidd}, true));
                 this.columnidd.AutoIncrement = true;
@@ -2384,17 +2398,17 @@ namespace Продажа_программного_обеспечения {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string website {
+            public string name {
                 get {
                     try {
-                        return ((string)(this[this.tabledeveloper.websiteColumn]));
+                        return ((string)(this[this.tabledeveloper.nameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'website\' в таблице \'developer\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'name\' в таблице \'developer\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledeveloper.websiteColumn] = value;
+                    this[this.tabledeveloper.nameColumn] = value;
                 }
             }
             
@@ -2432,14 +2446,30 @@ namespace Продажа_программного_обеспечения {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IswebsiteNull() {
-                return this.IsNull(this.tabledeveloper.websiteColumn);
+            public string website {
+                get {
+                    try {
+                        return ((string)(this[this.tabledeveloper.websiteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'website\' в таблице \'developer\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledeveloper.websiteColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetwebsiteNull() {
-                this[this.tabledeveloper.websiteColumn] = global::System.Convert.DBNull;
+            public bool IsnameNull() {
+                return this.IsNull(this.tabledeveloper.nameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetnameNull() {
+                this[this.tabledeveloper.nameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2464,6 +2494,18 @@ namespace Продажа_программного_обеспечения {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetemailNull() {
                 this[this.tabledeveloper.emailColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IswebsiteNull() {
+                return this.IsNull(this.tabledeveloper.websiteColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetwebsiteNull() {
+                this[this.tabledeveloper.websiteColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3943,7 +3985,7 @@ SELECT ida, datePublished, fileSize, softwareVersion, price, description, recent
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "developer";
             tableMapping.ColumnMappings.Add("idd", "idd");
-            tableMapping.ColumnMappings.Add("website", "website");
+            tableMapping.ColumnMappings.Add("website", "name");
             tableMapping.ColumnMappings.Add("physical_address", "physical_address");
             tableMapping.ColumnMappings.Add("email", "email");
             this._adapter.TableMappings.Add(tableMapping);

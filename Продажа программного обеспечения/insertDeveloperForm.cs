@@ -21,7 +21,7 @@ namespace Продажа_программного_обеспечения
 
         private void OKButton_Click(object sender, EventArgs e)
         {
-            Functions.addDeveloperData(iddTextBox.Text, websiteTextBox.Text, physical_addressTextBox.Text, emailTextBox.Text);
+            Functions.addDeveloperData(iddTextBox.Text, nameTextBox.Text, physical_addressTextBox.Text, emailTextBox.Text, websiteTextBox.Text);
             this.DialogResult = DialogResult.OK;
             this.Close();
         }

@@ -39,11 +39,13 @@
             this.physical_addressTextBox = new System.Windows.Forms.TextBox();
             this.websiteTextBox = new System.Windows.Forms.TextBox();
             this.iddTextBox = new System.Windows.Forms.TextBox();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.nameLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // goBackButton
             // 
-            this.goBackButton.Location = new System.Drawing.Point(195, 125);
+            this.goBackButton.Location = new System.Drawing.Point(195, 152);
             this.goBackButton.Name = "goBackButton";
             this.goBackButton.Size = new System.Drawing.Size(75, 23);
             this.goBackButton.TabIndex = 19;
@@ -53,7 +55,7 @@
             // 
             // OKButton
             // 
-            this.OKButton.Location = new System.Drawing.Point(13, 125);
+            this.OKButton.Location = new System.Drawing.Point(13, 152);
             this.OKButton.Name = "OKButton";
             this.OKButton.Size = new System.Drawing.Size(75, 23);
             this.OKButton.TabIndex = 18;
@@ -64,7 +66,7 @@
             // emailLabel
             // 
             this.emailLabel.AutoSize = true;
-            this.emailLabel.Location = new System.Drawing.Point(10, 93);
+            this.emailLabel.Location = new System.Drawing.Point(0, 93);
             this.emailLabel.Name = "emailLabel";
             this.emailLabel.Size = new System.Drawing.Size(89, 13);
             this.emailLabel.TabIndex = 17;
@@ -73,7 +75,7 @@
             // physical_addressLabel
             // 
             this.physical_addressLabel.AutoSize = true;
-            this.physical_addressLabel.Location = new System.Drawing.Point(10, 67);
+            this.physical_addressLabel.Location = new System.Drawing.Point(0, 67);
             this.physical_addressLabel.Name = "physical_addressLabel";
             this.physical_addressLabel.Size = new System.Drawing.Size(104, 13);
             this.physical_addressLabel.TabIndex = 16;
@@ -82,7 +84,7 @@
             // websiteLabel
             // 
             this.websiteLabel.AutoSize = true;
-            this.websiteLabel.Location = new System.Drawing.Point(10, 41);
+            this.websiteLabel.Location = new System.Drawing.Point(0, 119);
             this.websiteLabel.Name = "websiteLabel";
             this.websiteLabel.Size = new System.Drawing.Size(52, 13);
             this.websiteLabel.TabIndex = 15;
@@ -91,7 +93,7 @@
             // iddLabel
             // 
             this.iddLabel.AutoSize = true;
-            this.iddLabel.Location = new System.Drawing.Point(10, 15);
+            this.iddLabel.Location = new System.Drawing.Point(0, 15);
             this.iddLabel.Name = "iddLabel";
             this.iddLabel.Size = new System.Drawing.Size(99, 13);
             this.iddLabel.TabIndex = 14;
@@ -99,37 +101,55 @@
             // 
             // emailTextBox
             // 
-            this.emailTextBox.Location = new System.Drawing.Point(120, 90);
+            this.emailTextBox.Location = new System.Drawing.Point(122, 90);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(150, 20);
             this.emailTextBox.TabIndex = 13;
             // 
             // physical_addressTextBox
             // 
-            this.physical_addressTextBox.Location = new System.Drawing.Point(120, 64);
+            this.physical_addressTextBox.Location = new System.Drawing.Point(122, 64);
             this.physical_addressTextBox.Name = "physical_addressTextBox";
             this.physical_addressTextBox.Size = new System.Drawing.Size(150, 20);
             this.physical_addressTextBox.TabIndex = 12;
             // 
             // websiteTextBox
             // 
-            this.websiteTextBox.Location = new System.Drawing.Point(120, 38);
+            this.websiteTextBox.Location = new System.Drawing.Point(122, 116);
             this.websiteTextBox.Name = "websiteTextBox";
             this.websiteTextBox.Size = new System.Drawing.Size(150, 20);
             this.websiteTextBox.TabIndex = 11;
             // 
             // iddTextBox
             // 
-            this.iddTextBox.Location = new System.Drawing.Point(120, 12);
+            this.iddTextBox.Location = new System.Drawing.Point(122, 12);
             this.iddTextBox.Name = "iddTextBox";
             this.iddTextBox.Size = new System.Drawing.Size(150, 20);
             this.iddTextBox.TabIndex = 10;
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.Location = new System.Drawing.Point(122, 38);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(150, 20);
+            this.nameTextBox.TabIndex = 21;
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Location = new System.Drawing.Point(0, 41);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(125, 13);
+            this.nameLabel.TabIndex = 20;
+            this.nameLabel.Text = "Название организации";
             // 
             // updateDeveloperForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(278, 157);
+            this.ClientSize = new System.Drawing.Size(278, 187);
+            this.Controls.Add(this.nameTextBox);
+            this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.OKButton);
             this.Controls.Add(this.emailLabel);
@@ -160,5 +180,7 @@
         public System.Windows.Forms.TextBox physical_addressTextBox;
         public System.Windows.Forms.TextBox websiteTextBox;
         public System.Windows.Forms.TextBox iddTextBox;
+        private System.Windows.Forms.Label nameLabel;
+        public System.Windows.Forms.TextBox nameTextBox;
     }
 }

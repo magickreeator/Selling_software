@@ -39,32 +39,34 @@
             this.emailLabel = new System.Windows.Forms.Label();
             this.OKButton = new System.Windows.Forms.Button();
             this.goBackButton = new System.Windows.Forms.Button();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // iddTextBox
             // 
-            this.iddTextBox.Location = new System.Drawing.Point(122, 12);
+            this.iddTextBox.Location = new System.Drawing.Point(129, 12);
             this.iddTextBox.Name = "iddTextBox";
             this.iddTextBox.Size = new System.Drawing.Size(150, 20);
             this.iddTextBox.TabIndex = 0;
             // 
             // websiteTextBox
             // 
-            this.websiteTextBox.Location = new System.Drawing.Point(122, 38);
+            this.websiteTextBox.Location = new System.Drawing.Point(129, 116);
             this.websiteTextBox.Name = "websiteTextBox";
             this.websiteTextBox.Size = new System.Drawing.Size(150, 20);
             this.websiteTextBox.TabIndex = 1;
             // 
             // physical_addressTextBox
             // 
-            this.physical_addressTextBox.Location = new System.Drawing.Point(122, 64);
+            this.physical_addressTextBox.Location = new System.Drawing.Point(129, 64);
             this.physical_addressTextBox.Name = "physical_addressTextBox";
             this.physical_addressTextBox.Size = new System.Drawing.Size(150, 20);
             this.physical_addressTextBox.TabIndex = 2;
             // 
             // emailTextBox
             // 
-            this.emailTextBox.Location = new System.Drawing.Point(122, 90);
+            this.emailTextBox.Location = new System.Drawing.Point(129, 90);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(150, 20);
             this.emailTextBox.TabIndex = 3;
@@ -72,7 +74,7 @@
             // iddLabel
             // 
             this.iddLabel.AutoSize = true;
-            this.iddLabel.Location = new System.Drawing.Point(12, 15);
+            this.iddLabel.Location = new System.Drawing.Point(3, 15);
             this.iddLabel.Name = "iddLabel";
             this.iddLabel.Size = new System.Drawing.Size(99, 13);
             this.iddLabel.TabIndex = 4;
@@ -81,7 +83,7 @@
             // websiteLabel
             // 
             this.websiteLabel.AutoSize = true;
-            this.websiteLabel.Location = new System.Drawing.Point(12, 41);
+            this.websiteLabel.Location = new System.Drawing.Point(3, 119);
             this.websiteLabel.Name = "websiteLabel";
             this.websiteLabel.Size = new System.Drawing.Size(52, 13);
             this.websiteLabel.TabIndex = 5;
@@ -90,7 +92,7 @@
             // physical_addressLabel
             // 
             this.physical_addressLabel.AutoSize = true;
-            this.physical_addressLabel.Location = new System.Drawing.Point(12, 67);
+            this.physical_addressLabel.Location = new System.Drawing.Point(3, 67);
             this.physical_addressLabel.Name = "physical_addressLabel";
             this.physical_addressLabel.Size = new System.Drawing.Size(104, 13);
             this.physical_addressLabel.TabIndex = 6;
@@ -99,7 +101,7 @@
             // emailLabel
             // 
             this.emailLabel.AutoSize = true;
-            this.emailLabel.Location = new System.Drawing.Point(12, 93);
+            this.emailLabel.Location = new System.Drawing.Point(3, 93);
             this.emailLabel.Name = "emailLabel";
             this.emailLabel.Size = new System.Drawing.Size(89, 13);
             this.emailLabel.TabIndex = 7;
@@ -107,7 +109,7 @@
             // 
             // OKButton
             // 
-            this.OKButton.Location = new System.Drawing.Point(15, 125);
+            this.OKButton.Location = new System.Drawing.Point(15, 158);
             this.OKButton.Name = "OKButton";
             this.OKButton.Size = new System.Drawing.Size(75, 23);
             this.OKButton.TabIndex = 8;
@@ -117,7 +119,7 @@
             // 
             // goBackButton
             // 
-            this.goBackButton.Location = new System.Drawing.Point(197, 125);
+            this.goBackButton.Location = new System.Drawing.Point(197, 158);
             this.goBackButton.Name = "goBackButton";
             this.goBackButton.Size = new System.Drawing.Size(75, 23);
             this.goBackButton.TabIndex = 9;
@@ -125,11 +127,29 @@
             this.goBackButton.UseVisualStyleBackColor = true;
             this.goBackButton.Click += new System.EventHandler(this.goBackButton_Click);
             // 
+            // nameLabel
+            // 
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Location = new System.Drawing.Point(3, 41);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(125, 13);
+            this.nameLabel.TabIndex = 10;
+            this.nameLabel.Text = "Название организации";
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.Location = new System.Drawing.Point(129, 38);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(150, 20);
+            this.nameTextBox.TabIndex = 11;
+            // 
             // insertDeveloperForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 161);
+            this.ClientSize = new System.Drawing.Size(284, 193);
+            this.Controls.Add(this.nameTextBox);
+            this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.OKButton);
             this.Controls.Add(this.emailLabel);
@@ -161,5 +181,7 @@
         private System.Windows.Forms.Label emailLabel;
         private System.Windows.Forms.Button OKButton;
         private System.Windows.Forms.Button goBackButton;
+        private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.TextBox nameTextBox;
     }
 }

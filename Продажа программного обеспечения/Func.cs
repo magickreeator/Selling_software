@@ -213,7 +213,7 @@ namespace Продажа_программного_обеспечения
                 MessageBox.Show(ex.ToString());
             }
         }
-        public void updateDeveloperTableData(string param1, string param2, string param3, string param4)
+        public void updateDeveloperTableData(string param1, string param2, string param3, string param4, string param5)
         {
             try
             {
@@ -221,12 +221,13 @@ namespace Продажа_программного_обеспечения
                 using (SqlConnection conn = new SqlConnection(connect))
                 {
                     conn.Open();
-                    using (SqlCommand Update = new SqlCommand("UPDATE developer SET website=@param2, physical_address=@param3, email=@param4 WHERE idd=@param1", conn))
+                    using (SqlCommand Update = new SqlCommand("UPDATE developer SET name=@param2, physical_address=@param3, email=@param4, website=@param5 WHERE idd=@param1", conn))
                     {
                         Update.Parameters.AddWithValue("@param1", param1);
                         Update.Parameters.AddWithValue("@param2", param2);
                         Update.Parameters.AddWithValue("@param3", param3);
                         Update.Parameters.AddWithValue("@param4", param4);
+                        Update.Parameters.AddWithValue("@param5", param5);
                         Update.ExecuteNonQuery();
                     }
                     conn.Close();
@@ -371,12 +372,12 @@ namespace Продажа_программного_обеспечения
             add.Fill(ds);
             con.Close();
         }
-        public void addDeveloperData(string param1, string param2, string param3, string param4)
+        public void addDeveloperData(string param1, string param2, string param3, string param4, string param5)
         {
             DataSet ds = new DataSet();
             SqlConnection con = new SqlConnection(connect);
             con.Open();
-            SqlDataAdapter add = new SqlDataAdapter("INSERT INTO developer ([idd], [website], [physical_address], [email]) VALUES ('" + param1 + "', ' " + param2 + " ', '" + param3 + "', '" + param4 + "');", con);
+            SqlDataAdapter add = new SqlDataAdapter("INSERT INTO developer ([idd], [name], [physical_address], [email], [website]) VALUES ('" + param1 + "', ' " + param2 + " ', '" + param3 + "', '" + param4 + "', '" + param5 + "');", con);
             SqlCommandBuilder comb = new SqlCommandBuilder(add);
             add.Fill(ds);
             con.Close();

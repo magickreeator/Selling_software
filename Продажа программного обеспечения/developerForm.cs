@@ -42,9 +42,10 @@ namespace Продажа_программного_обеспечения
             if (dataGridView1.SelectedRows.Count != 0)
             {
                 updateDeveloperFrm.iddTextBox.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-                updateDeveloperFrm.websiteTextBox.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                updateDeveloperFrm.nameTextBox.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
                 updateDeveloperFrm.physical_addressTextBox.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
                 updateDeveloperFrm.emailTextBox.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                updateDeveloperFrm.websiteTextBox.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
                 updateDeveloperFrm.ShowDialog();
                 if (updateDeveloperFrm.DialogResult == DialogResult.OK)
                 {
