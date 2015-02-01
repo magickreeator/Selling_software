@@ -94,9 +94,10 @@ namespace Продажа_программного_обеспечения
             rep.Add("<table border=1 width=100% style\"border-collapse: collapse\" bordercolor=#000 id=\"table1\">");
             rep.Add("<tr>");
             rep.Add("<td align=center><b><font size=2>Код разработчика</font></b></td>");
-            rep.Add("<td align=center><b><font size=2>Сайт</font></b></td>");
+            rep.Add("<td align=center><b><font size=2>Название организации</font></b></td>");
             rep.Add("<td align=center><b><font size=2>Физический адрес</font></b></td>");
             rep.Add("<td align=center><b><font size=2>Эл. почта</font></b></td>");
+            rep.Add("<td align=center><b><font size=2>Сайт</font></b></td>");
             rep.Add("</tr>");
 
             ArrayList trtds = Functions.getTableData(tableName);
@@ -105,9 +106,10 @@ namespace Продажа_программного_обеспечения
                 DbDataRecord rec = trtds[i] as DbDataRecord;
                 rep.Add("<tr>");
                 rep.Add("<td><font size=2>" + rec["idd"].ToString() + "&nbsp;</font></td>");
-                rep.Add("<td><p align=center><font size=2>" + rec["website"].ToString() + "&nbsp;</font></td>");
+                rep.Add("<td><p align=center><font size=2>" + rec["name"].ToString() + "&nbsp;</font></td>");
                 rep.Add("<td><p align=center><font size=2>" + rec["physical_address"].ToString() + "&nbsp;</font></td>");
                 rep.Add("<td><p align=center><font size=2>" + rec["email"].ToString() + "&nbsp;</font></td>");
+                rep.Add("<td><p align=center><font size=2>" + rec["website"].ToString() + "&nbsp;</font></td>");
                 rep.Add("</tr>");
             }
             rep.Add("</table>");
