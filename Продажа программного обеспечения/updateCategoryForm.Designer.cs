@@ -102,7 +102,7 @@
             this.Controls.Add(this.idcTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "updateCategoryForm";
-            this.Text = "Редактирование даных о категории";
+            this.Text = "Редактирование данных о категории";
             this.ResumeLayout(false);
             this.PerformLayout();
 

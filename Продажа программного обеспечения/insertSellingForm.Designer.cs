@@ -162,7 +162,7 @@
             this.Controls.Add(this.idssTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "insertSellingForm";
-            this.Text = "Добавление даных о продажах";
+            this.Text = "Добавление данных о продажах";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.insertSellingForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();

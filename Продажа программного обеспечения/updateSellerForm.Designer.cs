@@ -222,7 +222,7 @@
             this.Controls.Add(this.idsTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "updateSellerForm";
-            this.Text = "Редактирование даных о продавце";
+            this.Text = "Редактирование данных о продавце";
             this.ResumeLayout(false);
             this.PerformLayout();
 

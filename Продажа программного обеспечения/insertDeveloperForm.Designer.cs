@@ -162,7 +162,7 @@
             this.Controls.Add(this.iddTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "insertDeveloperForm";
-            this.Text = "Добавление даных о разработчиках";
+            this.Text = "Добавление данных о разработчиках";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.insertDeveloperForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();

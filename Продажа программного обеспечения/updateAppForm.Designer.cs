@@ -242,7 +242,7 @@
             this.Controls.Add(this.idaTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "updateAppForm";
-            this.Text = "Редактирование даных о программе";
+            this.Text = "Редактирование данных о программе";
             this.ResumeLayout(false);
             this.PerformLayout();
 

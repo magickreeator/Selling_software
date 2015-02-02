@@ -242,7 +242,7 @@
             this.Controls.Add(this.idaTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "insertAppForm";
-            this.Text = "Добавление даных о программах";
+            this.Text = "Добавление данных о программах";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.insertAppForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();

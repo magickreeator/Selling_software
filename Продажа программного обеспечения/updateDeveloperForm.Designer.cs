@@ -162,7 +162,7 @@
             this.Controls.Add(this.iddTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "updateDeveloperForm";
-            this.Text = "Редактирование даных о разработчике";
+            this.Text = "Редактирование данных о разработчике";
             this.ResumeLayout(false);
             this.PerformLayout();
 

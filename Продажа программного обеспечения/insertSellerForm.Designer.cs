@@ -222,7 +222,7 @@
             this.Controls.Add(this.idsTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "insertSellerForm";
-            this.Text = "Добавление даных о продавцах";
+            this.Text = "Добавление данных о продавцах";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.insertSellerForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();

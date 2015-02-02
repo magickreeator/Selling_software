@@ -162,7 +162,7 @@
             this.Controls.Add(this.idssTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "updateSellingForm";
-            this.Text = "Редактирование даных о продаже";
+            this.Text = "Редактирование данных о продаже";
             this.ResumeLayout(false);
             this.PerformLayout();
 
