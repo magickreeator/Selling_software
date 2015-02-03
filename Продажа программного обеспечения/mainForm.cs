@@ -70,5 +70,10 @@ namespace Продажа_программного_обеспечения
             }
 
         }
+
+        private void mainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
