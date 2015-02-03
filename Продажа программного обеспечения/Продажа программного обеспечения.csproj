@@ -140,10 +140,6 @@
     <Compile Include="sellingForm.Designer.cs">
       <DependentUpon>sellingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Selling_softwareDataSet.cs">
-      <DependentUpon>Selling_softwareDataSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Selling_softwareDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
