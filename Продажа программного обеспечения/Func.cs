@@ -43,7 +43,28 @@ namespace Продажа_программного_обеспечения
             }
             return Selected;
         }
-
+        public bool Autorize(string login, string password)
+        {
+            ArrayList Selected = new ArrayList();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connect))
+                {
+                    conn.Open();
+                    using (SqlCommand cmdSelected = new SqlCommand("SELECT * from users where passwd='" + password + "' and login='" + login + "';", conn))
+                    using (SqlDataReader klientreader = cmdSelected.ExecuteReader())
+                        foreach (DbDataRecord arrayitem in klientreader)
+                            Selected.Add(arrayitem);
+                    if (Selected.Count != 0) return true;
+                    else return false;
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            return false;
+        }
         //public void updateAppTableData(string param1, string param2, string param3, string param4, string param5, string param6, string param7, string param8, string param9)
         //{
         //    SqlConnection cn = new SqlConnection(connect);
